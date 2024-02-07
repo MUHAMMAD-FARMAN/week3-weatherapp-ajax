@@ -8,8 +8,6 @@ function getWeather() {
     }
 
     const apiKey = 'b3e57b5ca62c4ac19cd72340230612';
-    // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
-    // const apiUrl = `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={apiKey}`;
     const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`
 
     // AJAX request using XMLHttpRequest

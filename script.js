@@ -8,7 +8,10 @@ function getWeather() {
     }
 
     const apiKey = 'b3e57b5ca62c4ac19cd72340230612';
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`
+    // const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`
+    const proxyUrl = 'https://week3-weatherapp-ajax.vercel.app/proxy.php';
+    const apiUrl = `${proxyUrl}?cityName=${encodeURIComponent(cityName)}`;
+
 
     // AJAX request using XMLHttpRequest
     const xhr = new XMLHttpRequest();
